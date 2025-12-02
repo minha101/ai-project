@@ -1,4 +1,3 @@
-https://drive.google.com/drive/folders/18osMpH2qMoMYv9qLDVCd2VSrkVeacb5X?usp=sharing
 
 from flask import Flask, render_template, request, url_for
 import pandas as pd
@@ -98,3 +97,4 @@ def dated_url_for(endpoint, **values):
 if __name__ == "__main__":
 
     app.run(debug=True)
+
