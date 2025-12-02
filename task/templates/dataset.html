@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dataset - Wholesale App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Wholesale Customers Dataset</h1>
+        <p>Preview of the first 10 records from the dataset</p>
+        
+        <div class="table-container">
+            {{ table|safe }}
+        </div>
+
+        <div class="dataset-info">
+            <h3>📋 Dataset Information:</h3>
+            <ul>
+                <li><strong>Total Records:</strong> 440</li>
+                <li><strong>Features:</strong> 8</li>
+                <li><strong>Channel:</strong> 1=Retail, 2=Horeca</li>
+                <li><strong>Region:</strong> 1=Lisbon, 2=Oporto, 3=Other</li>
+            </ul>
+        </div>
+
+        <div class="action-buttons">
+            <a href="/" class="btn btn-primary">🏠 Back to Home</a>
+            <a href="/summary" class="btn btn-secondary">📈 View Summary</a>
+            <a href="/cluster" class="btn btn-secondary">🎯 View Clusters</a>
+        </div>
+    </div>
+</body>
+</html>

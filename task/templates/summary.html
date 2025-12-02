@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Summary - Wholesale App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>📈 Dataset Summary Statistics</h1>
+        <p>Statistical overview of the wholesale customers dataset</p>
+        
+        <div class="table-container">
+            {{ table|safe }}
+        </div>
+
+        <div class="summary-explanation">
+            <h3>📊 Understanding the Summary:</h3>
+            <ul>
+                <li><strong>Count:</strong> Number of non-null values</li>
+                <li><strong>Mean:</strong> Average value</li>
+                <li><strong>Std:</strong> Standard deviation (spread of data)</li>
+                <li><strong>Min/Max:</strong> Minimum and maximum values</li>
+                <li><strong>25%/50%/75%:</strong> Percentile values</li>
+            </ul>
+        </div>
+
+        <div class="action-buttons">
+            <a href="/" class="btn btn-primary">🏠 Back to Home</a>
+            <a href="/dataset" class="btn btn-secondary">📊 View Dataset</a>
+        </div>
+    </div>
+</body>
+</html>

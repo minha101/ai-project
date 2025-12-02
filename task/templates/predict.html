@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predict Channel - Wholesale App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🔮 Predict Customer Channel</h1>
+        <p>Enter the customer's annual spending in different categories:</p>
+        
+        <form action="/result" method="POST" class="prediction-form">
+            <div class="form-group">
+                <label for="milk">Milk Products Spending (€):</label>
+                <input type="number" id="milk" name="milk" required min="0" step="100">
+            </div>
+            
+            <div class="form-group">
+                <label for="grocery">Grocery Spending (€):</label>
+                <input type="number" id="grocery" name="grocery" required min="0" step="100">
+            </div>
+            
+            <div class="form-group">
+                <label for="frozen">Frozen Products Spending (€):</label>
+                <input type="number" id="frozen" name="frozen" required min="0" step="100">
+            </div>
+            
+            <div class="form-group">
+                <label for="detergents_paper">Detergents & Paper Spending (€):</label>
+                <input type="number" id="detergents_paper" name="detergents_paper" required min="0" step="100">
+            </div>
+            
+            <div class="form-group">
+                <label for="delicassen">Delicatessen Spending (€):</label>
+                <input type="number" id="delicassen" name="delicassen" required min="0" step="100">
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Predict Channel</button>
+            <a href="/" class="btn btn-secondary">Back to Home</a>
+        </form>
+        
+        <div class="form-info">
+            <h3>💡 Typical Spending Ranges:</h3>
+            <ul>
+                <li><strong>Milk:</strong> 55 - 73,498 €</li>
+                <li><strong>Grocery:</strong> 3 - 92,780 €</li>
+                <li><strong>Frozen:</strong> 25 - 60,869 €</li>
+                <li><strong>Detergents_Paper:</strong> 3 - 40,827 €</li>
+                <li><strong>Delicassen:</strong> 3 - 47,943 €</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

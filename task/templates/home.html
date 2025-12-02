@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wholesale Customer Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🏪 Wholesale Customer Analysis</h1>
+        <p class="subtitle">Predict Customer Channel & Analyze Spending Patterns</p>
+        
+        <div class="nav-links">
+            <a href="/predict" class="btn btn-primary">🔮 Predict Channel</a>
+            <a href="/dataset" class="btn btn-secondary">📊 View Dataset</a>
+            <a href="/summary" class="btn btn-secondary">📈 Data Summary</a>
+            <a href="/cluster" class="btn btn-secondary">🎯 Customer Clusters</a>
+        </div>
+        
+        <div class="info-section">
+            <h2>About This Project</h2>
+            <p>This application predicts whether a wholesale customer belongs to <strong>Retail</strong> or <strong>Horeca</strong> (Hotel/Restaurant/Cafe) channel based on their spending patterns.</p>
+            
+            <div class="features">
+                <div class="feature">
+                    <h3>🎯 Prediction</h3>
+                    <p>Predict customer channel using Machine Learning</p>
+                </div>
+                <div class="feature">
+                    <h3>📊 Analysis</h3>
+                    <p>Explore dataset and statistical summaries</p>
+                </div>
+                <div class="feature">
+                    <h3>🎯 Clustering</h3>
+                    <p>Group customers into segments using K-Means</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

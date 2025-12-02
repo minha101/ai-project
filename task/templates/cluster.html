@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Clusters - Wholesale App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Customer Clusters Analysis</h1>
+        <p>Customers grouped into 3 segments using K-Means Clustering</p>
+        
+        <div class="cluster-info">
+            <h3>📊 Cluster Information:</h3>
+            <ul>
+                <li><strong>Total Customers:</strong> 440</li>
+                <li><strong>Number of Clusters:</strong> 3</li>
+                <li><strong>Algorithm:</strong> K-Means</li>
+                <li><strong>Features Used:</strong> Fresh, Milk, Grocery, Frozen, Detergents_Paper, Delicassen</li>
+            </ul>
+        </div>
+
+        <div class="table-container">
+            <h3>Cluster Results (First 15 Customers):</h3>
+            {{ table|safe }}
+        </div>
+
+        <div class="action-buttons">
+            <a href="/" class="btn btn-primary">🏠 Back to Home</a>
+            <a href="/dataset" class="btn btn-secondary">📊 View Full Dataset</a>
+        </div>
+
+        <div class="clustering-explanation">
+            <h3>💡 What is Clustering?</h3>
+            <p>Clustering groups similar customers together based on their spending patterns. This helps in:</p>
+            <ul>
+                <li>Identifying customer segments</li>
+                <li>Targeted marketing strategies</li>
+                <li>Understanding spending behaviors</li>
+                <li>Personalized product recommendations</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

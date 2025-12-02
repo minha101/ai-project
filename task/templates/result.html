@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result - Wholesale App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        {% if error %}
+            <div class="error-message">
+                <h2>❌ Error</h2>
+                <p>{{ error }}</p>
+            </div>
+        {% else %}
+            <div class="result-card">
+                <h1>🎯 Prediction Result</h1>
+                
+                <div class="prediction-result">
+                    <h2>Predicted Channel: <span class="highlight">{{ prediction }}</span></h2>
+                    <p class="confidence">Confidence: {{ confidence }}</p>
+                </div>
+                
+                <div class="input-summary">
+                    <h3>📊 Input Values:</h3>
+                    <table>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Value (€)</th>
+                        </tr>
+                        <tr>
+                            <td>Milk Products</td>
+                            <td>{{ milk }}</td>
+                        </tr>
+                        <tr>
+                            <td>Grocery</td>
+                            <td>{{ grocery }}</td>
+                        </tr>
+                        <tr>
+                            <td>Frozen Products</td>
+                            <td>{{ frozen }}</td>
+                        </tr>
+                        <tr>
+                            <td>Detergents & Paper</td>
+                            <td>{{ detergents_paper }}</td>
+                        </tr>
+                        <tr>
+                            <td>Delicatessen</td>
+                            <td>{{ delicassen }}</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="action-buttons">
+                    <a href="/predict" class="btn btn-primary">🔮 New Prediction</a>
+                    <a href="/" class="btn btn-secondary">🏠 Back to Home</a>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
