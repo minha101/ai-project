@@ -1,3 +1,6 @@
+### Car Demo Video
+[Click to watch the demo video]
+https://drive.google.com/file/d/1ujrhxTRMR8GvlOdFIlEkDMkYWdHY3_tZ/view?usp=sharing
 Wholesale Customer Analysis & Prediction System
 <div align="center">
 https://img.shields.io/badge/Python-3.7+-blue.svg
